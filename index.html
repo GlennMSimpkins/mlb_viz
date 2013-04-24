@@ -77,6 +77,7 @@
           zoom: 4
         });
 
+        //Data in
         layer = new modules.d3Layer('data/mlb_salaries.json', {
           attrs: [
             { key: 'r', value: function(d){ return payroll(d.properties.team.payroll); } },
@@ -85,6 +86,7 @@
           ],
           type: 'circle'
         }); 
+        //draw a dot for the team?
         map.addLayer(layer);
 
         d3.select('body').append('div')
@@ -324,9 +326,11 @@
     </script>
   </head>
   <body class="tundra">
+    <!-- 
     <div style="position: absolute; top: 0; right: 0; border: 0; z-index:1;">
       <a href="https://github.com/chelm/mlb_viz">
         <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    -->
     </div>
     <div id="map"></div>
     <div id="team">
